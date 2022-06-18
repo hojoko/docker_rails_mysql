@@ -11,7 +11,7 @@ DockerでRails×MySQLの環境を構築する。
 2. `rm -rf docker_rails_mysql/.git`
 3. `mv docker_rails_mysql 任意のアプリ名`
 4. `cd 任意のアプリ名`
-5. `docker-compose run web rails new . --force --database=mysql --skip-test`
+5. `docker-compose run web rails new . --force --database=mysql --no-deps --skip-test`
 6. `docker-compose build`
 7. `config/database.yml`の`password`と`host`を編集
 8. `docker-compose run web rails db:create`
