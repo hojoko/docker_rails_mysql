@@ -3,8 +3,8 @@ DockerでRails×MySQLの環境を構築する。
 
 ## 環境(適宜変更する)
 * Ruby:   3系
-* Rails:  最新
-* MySQL:  8.0
+* Rails:  7系
+* MySQL:  5.7
 
 ## 手順
 1. `git clone https://github.com/hojoko/docker_rails_mysql.git`
