@@ -7,16 +7,39 @@ DockerでRails×MySQLの環境を構築する。
 * MySQL:  5.7
 
 ## 手順
-1. `git clone https://github.com/hojoko/docker_rails_mysql.git`
-2. `rm -rf docker_rails_mysql/.git`
-3. `mv docker_rails_mysql 任意のアプリ名`
-4. `cd 任意のアプリ名`
-5. `docker-compose run web rails new . --force --database=mysql --no-deps --skip-test`
-6. `docker-compose build`
-7. `config/database.yml`の`password`と`host`を編集
-8. `docker-compose run web rails db:create`
-9. `docker-compose down`
-10. `docker-compose up -d`
-11. `localhost:3000`で確認
-12. `.gitignore`に`/db/mysql_data`を追加
-13. GitHubのリポジトリを追加
+### 1. このリポジトリをクローン
+```
+git clone https://github.com/hojoko/docker_rails_mysql.git`
+```
+### 2. git管理を削除
+```
+rm -rf docker_rails_mysql/.git
+```
+### 3. 任意のアプリ名を設定し移動
+```
+mv docker_rails_mysql 任意のアプリ名
+```
+```
+cd 任意のアプリ名
+```
+### 4. dockerで環境構築 
+```
+docker-compose run web rails new . --force --database=mysql --no-deps --skip-test
+```
+```
+docker-compose build
+```
+### 5. `config/database.yml`の`password`と`host`を編集
+### 6. DBの作成 
+```
+docker-compose run web rails db:create
+```
+### 7. dockerの立ち上げ 
+```
+docker-compose down
+```
+```
+docker-compose up -d
+```
+### 8. `localhost:3000`で確認
+### 9. GitHubのリポジトリを追加
